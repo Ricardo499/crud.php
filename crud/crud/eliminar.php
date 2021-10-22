@@ -3,13 +3,13 @@ include("./inc/settings.php");
 validar();
 ?>
 <?php
-print_r($_POST);
+
 
 $id=$_POST['colum1'];
 
 $query="DELETE FROM table1 WHERE column1=$id;";
 
-// echo $query;
+
 
 
 // Create connection
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-if ( $conn->query($query)== TRUE){
+if ( $conn->query($query)){
     header("location:crud.php");
 }else{
     echo "Algo salio mal <a href='https://localhost/crud/crud.php'> clic aqui para volver al crud</a>" ;
