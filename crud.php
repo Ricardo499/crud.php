@@ -11,7 +11,6 @@ validar();
     <title>Document</title>
     <script src="./js/funciones.js"></script> 
 
-<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="./css/estilos.css">
 
 </head>
@@ -32,7 +31,7 @@ if ($conn->connect_error) {
 $sql = "SELECT column1, column2, column3, column4, column5 FROM table1";
 $result = $conn->query($sql);
 define("TD", "</td>\n\t<td>");
-//print_r($result);
+
 if ($result->num_rows > 0) {
   echo "<table border='1'><tr><th>ID</th><th>Name</th><th>Fecha</th><th>Numero</th><th>NumeroDouble</th><th>Eliminar</th><th>Modificar</th></tr>";
   // output data of each row
@@ -43,7 +42,7 @@ if ($result->num_rows > 0) {
     echo "<input type='hidden' name='colum1' value='".$row["column1"]."'>";
     echo "<input type='submit' value='' style=\"background:url('./img/eliminar.png'); border: 0; display: block; width: 24px; height: 24px;\" onclick='return confirmar()'></form></td>\n";
     echo "<td>";
-    //echo "<a href='update.php?colum1=".$row["column1"]."' onclick='return confirmarModificar()'><img src='./img/update.png'></td></tr>\n";
+    
     echo "<form action='update.php' method='post'>";
     echo "<input type='hidden' name='colum1' value='".$row["column1"]."'>";
     echo "<input type='submit' value='' style=\"background:url('./img/update.png'); border: 0; display: block; width: 24px; height: 24px;\" onclick='return confirmar()'></form></td>\n";
