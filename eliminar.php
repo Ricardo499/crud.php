@@ -3,7 +3,6 @@ include("./inc/settings.php");
 validar();
 ?>
 <?php
-print_r($_POST);
 
 $id=$_POST['colum1'];
 // Create connection
